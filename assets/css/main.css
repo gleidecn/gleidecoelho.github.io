@@ -1,0 +1,428 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&family=Roboto:ital,wght@1,700&family=Wix+Madefor+Text:ital,wght@0,700;1,400&family=Work+Sans:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&family=Roboto+Mono:wght@400;700&family=Wix+Madefor+Text:ital,wght@0,700;1,400&family=Work+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: sans-serif; */
+}
+
+.contenedor__description,
+.contenedor__skills,
+.contenedor__projectos--img,
+.contenedor__contact {
+  max-width: 1200px; /* O ajusta el valor según tus necesidades */
+  margin: 0 auto; /* Centrar horizontalmente */
+}
+
+.video-cover {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  min-width: 105%;
+  min-width: 100%;
+  z-index: -2;
+  background-color: rgba(0, 0, 0, 0.6); /* Color opaco */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.1rem;
+  background-color: #111010;
+  margin-bottom: 3rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.logo {
+  max-width: 13rem;
+  color: #be2275;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #ececec;
+}
+
+.nav-list li {
+  margin-bottom: 1rem;
+}
+
+.abrir-menu,
+.cerrar-menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .abrir-menu {
+    color: #ececec;
+  }
+
+  .cerrar-menu {
+    color: #ececec;
+  }
+
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1c1c1c;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  }
+
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-list li {
+    color: #ecececec;
+  }
+}
+
+/* Contenedor descripcion */
+.contenedor__description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 100%; /* Ocupa todo el ancho de la página */
+  height: 90%; /* Ajusta la altura como desees */
+  color: #e7d5e0d8;
+}
+
+.perfil__img {
+  height: 180px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.contenedor__description--box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  padding: 2rem;
+  width: 450px;
+  background-color: rgba(29, 30, 30, 0.814);
+  font-family: 'Open Sans', sans-serif;
+  color: #e7d5e0d8;
+}
+.contenedor__title {
+  color: #be2275;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+}
+
+.contenedor__description--texto {
+  font-size: 1rem;
+  font-family: 'Roboto Mono', monospace;
+  color: rgba(255, 229, 213, 0.85);
+}
+
+/* Contenedor SKILLS */
+
+.contenedor__titulo--skills {
+  margin-bottom: 2rem; /* separation between boxes*/
+}
+.caja__titulo--skills {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+  color: #be2275;
+  margin: 4rem 0 0 0; /* Ajustar el margen izquierdo */
+  background-color: transparent;
+}
+
+.line {
+  width: 150px;
+  height: 1px;
+  border-color: rgb(13, 91, 126); /* Cambia el color a rojo */
+  border-width: 2px; /* Cambia el grosor a 2 píxeles */
+  margin: 0 auto; /* Centrar horizontalmente */
+}
+
+.line__progress {
+  margin: 0.5rem;
+}
+
+.contenedor__skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 1rem; */
+  width: 80%; /* Modificar el ancho a un valor deseado, por ejemplo, 80% */
+  max-width: 800px; /* Establecer un ancho máximo para evitar que se vuelva demasiado ancho en pantallas grandes */
+  color: #fff;
+  /* text-transform: uppercase; */
+  margin: 0 auto; /* Centrar horizontalmente */
+}
+
+.caja__icons--skills {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  font-size: 1rem;
+  font-family: 'Roboto Mono', monospace;
+  color: rgba(255, 229, 213, 0.85);
+  width: 100%; /* Ajustar el ancho al 100% del contenedor padre (contenedor__skills) */
+  margin-top: 0.5rem;
+}
+
+.caja__front,
+.caja__in_Progress,
+.caja__back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  font-size: 0.7rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
+}
+
+.caja__titles {
+  margin-bottom: 0.5rem;
+}
+
+.img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin: 0.5rem;
+}
+
+.img1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin-top: 1.2rem;
+}
+
+/* .img2 {
+ display: flex;
+  flex-direction: column;
+  align-items: center; 519973
+  width: 90px;
+  height: 90px;
+  margin-top: 1.2rem;
+} */
+
+/* Media Query Contenedor SKILLS */
+@media (max-width: 768px) {
+  .contenedor__skills {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .caja__titulo--skills {
+    font-size: 1.4rem;
+  }
+
+  .caja__icons--skills {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /*Centrar verticalmente */
+    text-transform: uppercase;
+    width: 100%; /* Ajustar el ancho al 100% del contenedor padre (contenedor__skills) */
+    margin-top: 0.8rem;
+  }
+
+  .contenedor__titulo--skills > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.7rem;
+  }
+
+  .caja__front,
+  .caja__in_Progress,
+  .caja__back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+    width: 100%; /* Agregar esta regla para ocupar el ancho completo */
+  }
+
+  .caja__titles {
+    margin-bottom: 0.5rem;
+  }
+
+  .img {
+    width: 60px;
+    height: 60px;
+    margin: 0.5rem;
+  }
+
+  /* Nuevas reglas para centrar los íconos en la versión móvil */
+}
+
+/* PROJECTS */
+.contenedor__projectos--title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1rem; /* separation between boxes*/
+}
+
+.projects__title {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: 'Nunito', sans-serif;
+  color: #be2275;
+  margin: 4rem 0 0 0; /* Ajustar el margen izquierdo */
+  background-color: transparent;
+}
+
+.line__projects {
+  width: 220px;
+  height: 1px;
+  border-color: rgb(13, 91, 126); /* Cambia el color a rojo */
+  border-width: 2px; /* Cambia el grosor a 2 píxeles */
+  margin: 0 auto; /* Centrar horizontalmente */
+}
+
+.projects__img {
+  width: 350px;
+  height: 250px;
+  margin: 3% 3% 2% 0;
+}
+
+.contenedor__projectos--img {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor__projectos--inside {
+  text-align: center;
+}
+
+/* Contenedor Contact */
+
+.contenedor__contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.contenedor__contact--title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: 'Nunito', sans-serif;
+  color: #be2275;
+  margin: 4rem 0 0 0;
+  background-color: transparent;
+}
+
+.line__contact {
+  width: 260px;
+  height: 1px;
+  border-color: rgb(13, 91, 126); /* Cambia el color a rojo */
+  border-width: 2px; /* Cambia el grosor a 2 píxeles */
+  margin: 0 auto; /* Centrar horizontalmente */
+}
+
+.caja__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.icons {
+  font-size: 2rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  color: rgb(13, 91, 126);
+}
+
+/* Cambiar el color de los logos a Pinkshh */
+.icons:hover {
+  color: #be2275;
+  font-size: 2.5rem;
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
+  font-size: 0.8rem;
+  color: #e7d5e0d8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
